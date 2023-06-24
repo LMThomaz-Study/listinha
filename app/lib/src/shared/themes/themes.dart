@@ -13,7 +13,31 @@ ThemeData get lightTheme => ThemeData(
         backgroundColor: _lightColorScheme.primary,
         foregroundColor: _lightColorScheme.onPrimary,
       ),
-      segmentedButtonTheme: _segmentButtonTheme,
+      segmentedButtonTheme: SegmentedButtonThemeData(
+        style: ButtonStyle(
+          textStyle: MaterialStateProperty.resolveWith<TextStyle>((states) {
+            if (states.contains(MaterialState.selected)) {
+              return const TextStyle(
+                fontSize: 9,
+              );
+            }
+
+            return const TextStyle(
+              fontSize: 12,
+            );
+          }),
+          padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry>(
+            (states) => const EdgeInsets.only(left: 8, right: 8),
+          ),
+          backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+            if (states.contains(MaterialState.selected)) {
+              return _lightColorScheme.inversePrimary;
+            }
+
+            return _lightColorScheme.background;
+          }),
+        ),
+      ),
     );
 
 ThemeData get dartTheme => ThemeData(
@@ -23,21 +47,26 @@ ThemeData get dartTheme => ThemeData(
         centerTitle: true,
         backgroundColor: _darkColorScheme.primaryContainer,
       ),
-      segmentedButtonTheme: _segmentButtonTheme,
-    );
+      segmentedButtonTheme: SegmentedButtonThemeData(
+        style: ButtonStyle(
+          textStyle: MaterialStateProperty.resolveWith<TextStyle>((states) {
+            if (states.contains(MaterialState.selected)) {
+              return const TextStyle(
+                fontSize: 9,
+              );
+            }
 
-SegmentedButtonThemeData get _segmentButtonTheme => SegmentedButtonThemeData(
-      style: ButtonStyle(
-        textStyle: MaterialStateProperty.resolveWith<TextStyle>((states) {
-          if (states.contains(MaterialState.selected)) {
             return const TextStyle(
-              fontSize: 9,
+              fontSize: 12,
             );
-          }
+          }),
+          backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+            if (states.contains(MaterialState.selected)) {
+              return _darkColorScheme.inversePrimary;
+            }
 
-          return const TextStyle(
-            fontSize: 12,
-          );
-        }),
+            return _darkColorScheme.background;
+          }),
+        ),
       ),
     );
