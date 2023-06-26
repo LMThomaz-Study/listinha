@@ -90,7 +90,7 @@ packages:
     source: hosted
     version: "2.2.0"
   build_runner:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: build_runner
       sha256: "5e1929ad37d48bd382b124266cb8e521de5548d406a45a5ae6656c13dab73e37"
@@ -499,6 +499,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  rx_notifier:
+    dependency: "direct main"
+    description:
+      name: rx_notifier
+      sha256: "278916b463cd190de88d6f167f811a3398bbc2b2a8adba6cb69b0f1652c2d72e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.4"
+  rx_notifier_annotation:
+    dependency: transitive
+    description:
+      name: rx_notifier_annotation
+      sha256: "362496563d617aa6fa21ab9c131f66348f3266b6580d69ecc23d2c23a52070a2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  rx_notifier_generator:
+    dependency: "direct dev"
+    description:
+      name: rx_notifier_generator
+      sha256: "1d6a0c701b3a604a9cbb54c6fb678f3b28c3a5ecef344ad62e5ae8eb9a1d1503"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   sane_uuid:
     dependency: transitive
     description:

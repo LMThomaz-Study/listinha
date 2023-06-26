@@ -36,12 +36,15 @@ dependencies:
   flutter_modular: ^6.0.0-alpha.5
   realm: ^1.2.0
   intl: ^0.18.1
+  rx_notifier: ^2.2.4
 
 dev_dependencies:
+  build_runner: ^2.4.5
   flutter_test:
     sdk: flutter
   flutterando_analysis: ^0.0.2
   mocktail: ^0.3.0
+  rx_notifier_generator: ^1.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
